@@ -9,6 +9,7 @@ gradle-versions = "0.39.0"
 hilt = "2.40.5"
 junit = "4.13.2"
 kotlin = "1.6.10"
+ktlint = "10.2.0"
 material = "1.4.0"
 
 [libraries]
@@ -19,7 +20,7 @@ androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx
 androidx-compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "androidx-compose-compiler" }
 androidx-compose-material = { module = "androidx.compose.material:material", version.ref = "androidx-compose" }
 androidx-compose-ui = { module = "androidx.compose.ui:ui", version.ref = "androidx-compose" }
-androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "androidx-compose" }
+androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "androidx-compose" }
 androidx-lifecycle = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidx-lifecycle" }
 junit = { module = "junit:junit", version.ref = "junit" }
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
@@ -28,7 +29,8 @@ hilt-core = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hilt" }
 
 [bundles]
-androidx-compose = ["androidx-compose-compiler", "androidx-compose-material", "androidx-compose-ui"]
+androidx-compose = ["androidx-compose-compiler", "androidx-compose-material", "androidx-compose-ui", "androidx-compose-ui-tooling"]
 
 [plugins]
 gradle-versions = { id = "com.github.ben-manes.versions", version.ref = "gradle-versions" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }

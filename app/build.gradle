@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
     alias libs.plugins.gradle.versions
+    alias libs.plugins.ktlint
 }
 
 android {
@@ -57,6 +58,4 @@ dependencies {
     kapt libs.hilt.compiler
 
     testImplementation libs.junit
-
-    debugImplementation libs.androidx.compose.ui.tooling
 }
