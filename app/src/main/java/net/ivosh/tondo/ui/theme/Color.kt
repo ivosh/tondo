@@ -2,7 +2,6 @@ package net.ivosh.tondo.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple200 = Color(0xFFBB86FC)
-val Purple500 = Color(0xFF6200EE)
-val Purple700 = Color(0xFF3700B3)
-val Teal200 = Color(0xFF03DAC5)
+val ArcBlue = Color(0xFF4287f5)
+val ArcRed = Color(0xFFf54263)
+val ArcYellow = Color(0xFFdae01d)
