@@ -14,14 +14,18 @@ import androidx.compose.ui.graphics.Color
 data class TondoColors(
     val arcBlue: Color,
     val arcRed: Color,
-    val arcYellow: Color
+    val arcYellow: Color,
+    val sliderBarArrow: Color,
+    val sliderBarBackground: Color
 )
 
 val LocalTondoColors = staticCompositionLocalOf {
     TondoColors(
         arcBlue = Color.Unspecified,
         arcRed = Color.Unspecified,
-        arcYellow = Color.Unspecified
+        arcYellow = Color.Unspecified,
+        sliderBarArrow = Color.Unspecified,
+        sliderBarBackground = Color.Unspecified
     )
 }
 
@@ -31,7 +35,9 @@ private val darkColorPalette = darkColors()
 private val tondoColorPalette = TondoColors(
     arcBlue = ArcBlue,
     arcRed = ArcRed,
-    arcYellow = ArcYellow
+    arcYellow = ArcYellow,
+    sliderBarArrow = SliderBarArrow,
+    sliderBarBackground = SliderBarBackground
 )
 
 @Composable
