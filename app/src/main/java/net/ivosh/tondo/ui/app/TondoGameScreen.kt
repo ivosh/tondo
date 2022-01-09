@@ -34,7 +34,7 @@ fun TondoGameScreen(
     ) {
         Box {}
         BoxWithConstraints {
-            val targetWidth = maxWidth / 2
+            val targetWidth = maxWidth * 2 / 3
             Target(
                 rotation,
                 modifier = Modifier
@@ -45,7 +45,7 @@ fun TondoGameScreen(
                     }
             )
         }
-        TargetScrollable(onValueChange = { updateRotation(it) })
+        TargetRotateBar(onValueChange = { updateRotation(it) })
     }
 }
 

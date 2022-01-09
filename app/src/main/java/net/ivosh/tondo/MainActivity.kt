@@ -7,19 +7,19 @@ import androidx.activity.viewModels
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
-import net.ivosh.tondo.model.GameViewModel
+import net.ivosh.tondo.model.GameState
 import net.ivosh.tondo.ui.app.TondoGameScreen
 import net.ivosh.tondo.ui.theme.TondoTheme
 
 class MainActivity : ComponentActivity() {
-    val gameViewModel by viewModels<GameViewModel>()
+    private val gameState by viewModels<GameState>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             TondoTheme {
                 Surface(color = MaterialTheme.colors.background) {
-                    TondoGameActivity(gameViewModel)
+                    TondoGameActivity(gameState)
                 }
             }
         }
@@ -27,10 +27,10 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun TondoGameActivity(gameViewModel: GameViewModel) {
+fun TondoGameActivity(gameState: GameState) {
     TondoGameScreen(
-        rotation = gameViewModel.target.rotation,
-        updateRotation = gameViewModel.target::updateRotation,
-        setPosition = gameViewModel.target::setPosition
+        rotation = gameState.target.rotation,
+        updateRotation = gameState.target::updateRotation,
+        setPosition = gameState.target::setPosition
     )
 }

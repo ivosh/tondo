@@ -29,7 +29,9 @@ val LocalTondoColors = staticCompositionLocalOf {
     )
 }
 
-private val lightColorPalette = lightColors()
+private val lightColorPalette = lightColors(
+    background = Background
+)
 private val darkColorPalette = darkColors()
 
 private val tondoColorPalette = TondoColors(

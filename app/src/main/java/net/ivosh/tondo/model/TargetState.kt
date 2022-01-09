@@ -8,13 +8,15 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
 class TargetState() {
+    private val sensitivity = 2.0f
+
     var rotation by mutableStateOf(0.0f)
         private set
     private var position: Offset = Offset.Unspecified
     private var radius = 300.dp
 
     fun updateRotation(delta: Float) {
-        val update = (delta * 360).toInt() % 360.0f
+        val update = (delta * 360 * sensitivity).toInt() % 360.0f
         rotation += update
     }
 
